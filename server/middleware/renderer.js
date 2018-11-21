@@ -7,7 +7,7 @@ import App from '../../src/App';
 const path = require("path");
 const fs = require("fs");
 
-module.exports = (req, res, next) => {
+export default (req, res, next) => {
 
     // point to the html file created by CRA's build tool
     const filePath = path.resolve(__dirname, '..', '..', 'build', 'index.html');
