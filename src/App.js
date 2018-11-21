@@ -4,13 +4,14 @@ import logo from './logo.svg';
 import './App.css';
 
 const AsyncComponent = Loadable({
-  loader: () => import('./someComponent'),
-  loading: () => <div>loading...</div>
+  loader: () => import(/* webpackChunkName: "myNamedChunk" */ './someComponent'),
+  loading: () => <div>loading...</div>,
+  modules: ['myNamedChunk']
 });
 
 class App extends Component {
   state = {
-    show: 1
+    show: false
   }
 
   onClick = (e) => {
@@ -23,10 +24,11 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <button onClick={this.onClick}>Show</button>
-        {this.state.show &&
+        {/* <button onClick={this.onClick}>Show</button> */}
+        {/* {this.state.show &&
           <AsyncComponent />
-        }
+        } */}
+        <AsyncComponent />
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>

@@ -10,8 +10,8 @@
     "react-scripts": "2.1.1"
   },
   "scripts": {
-    "ssr": "yarn build && env NODE_ENV=development nodemon server/bootstrap.js",
-    "start": "react-scripts start",
+    "ssr": "env NODE_ENV=development nodemon server/bootstrap.js",
+    "client": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
