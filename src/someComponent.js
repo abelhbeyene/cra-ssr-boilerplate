@@ -1,5 +1,3 @@
-import React from 'react';
+import React from 'react'
 
-export default () => (
-    <p>Hi, I'm async.</p>
-);
+export default () => <p>Hi, I'm async.</p>
